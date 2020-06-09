@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VerDatos</title>
+</head>
+<body>
+    <div>
+        <h1>Escuela de Ingenieria de Sistemas</h1>
+        <br /><br />
+        <b>Curso: </b>@ViewBag.Curso <br />
+        <b>Ciclo: </b>@ViewBag.Ciclo <br />
+        <br />
+        <b>Docente: </b>@ViewData["Docente"] <br />
+        <b>N Matriculados: </b>@ViewData["Estudiante"] <br />
+        <b>Fecha y Hora: </b>@ViewData["FechaHora"] <br />
+    </div>
+</body>
+</html>

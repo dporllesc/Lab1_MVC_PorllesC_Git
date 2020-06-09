@@ -1,0 +1,27 @@
+﻿@model Lab1_MVC_PorllesC.Models.ClsTabla
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CalcularTabla</title>
+</head>
+<body>
+    <div> 
+        <h1>Tabla de Multiplicar del @Model.numero</h1>
+        <br />
+
+        @for (int i=0; i <= 12; i++)
+        {
+            var multiplicar = 0;
+
+            multiplicar = Convert.ToInt32(Model.numero * i);
+            <div> @Model.numero X @i = @multiplicar </div>
+        }
+    </div>
+</body>
+</html>

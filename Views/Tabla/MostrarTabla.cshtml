@@ -1,0 +1,26 @@
+﻿@model Lab1_MVC_PorllesC.Models.ClsTabla
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MostrarTabla</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("CalcularTabla", "Tabla", FormMethod.Post))
+        {
+        <p>
+            @Html.LabelFor(model => model.numero, "Ingrese Numero")
+            @Html.EditorFor(model => model.numero)
+
+        </p>
+        <input type="submit" value="Calcular" />
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@model Lab1_MVC_PorllesC.Models.ClsOperaciones
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Operaciones Aritmeticas</h1>
+        <br /><br />
+        @using (Html.BeginForm("CalcularOperacion", "Operaciones", FormMethod.Post))
+        {
+            <p>
+                @Html.Label("Numero1: ")
+                @Html.EditorFor(model => model.numero1)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.numero2, "Numero2")
+                @Html.EditorFor(model => model.numero2)
+            </p>
+            <p>
+                @Html.Label("Tipo")
+                @Html.DropDownListFor(model => model.tipo, new List<SelectListItem>
+           {
+               new SelectListItem() {Text = "Suma", Value = "S"},
+               new SelectListItem() {Text = "Resta", Value = "R"},
+               new SelectListItem() {Text = "Multiplicacion", Value = "M"},
+               new SelectListItem() {Text = "Division", Value = "D"},
+
+           }
+
+               )
+                
+            </p><br />
+            <input type="submit" value="Calcular" />
+        }
+    </div>
+  
+</body>
+</html>

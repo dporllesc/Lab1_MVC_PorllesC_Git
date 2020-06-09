@@ -1,0 +1,26 @@
+﻿@model Lab1_MVC_PorllesC.Models.ClsOperaciones
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CalcularOperacion</title>
+</head>
+<body>
+    <div>
+        <h1>Resultado de @Model.tipo</h1>
+        <label>A: </label>@Model.numero1 <br />
+        <label>B: </label>@Model.numero2 <br />
+        <br />
+        <label>Tipo: </label>@Model.tipo <br />
+        <br />
+        <label>Resultado: </label>@Model.resultado <br />
+        <br />
+        <a href="Index"><< Retorna al formulario</a>
+    </div>
+</body>
+</html>
